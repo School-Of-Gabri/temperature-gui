@@ -1,0 +1,41 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"commands.commands": {
+			"Go: Full Build (workspace)": {
+				"icon": "rocket",
+				"command": "commands.runInTerminal",
+				"args": "target_bin=`realpath --relative-to=.. .`; go build -o $target_bin -v -x -a .",
+				"statusBar": {
+					"alignment": "left",
+					"text": "Go: Full Build",
+					"priority": -9998
+				}
+			},
+			"Go: Full Quick (workspace)": {
+				"icon": "zap",
+				"command": "commands.runInTerminal",
+				"args": "target_bin=`realpath --relative-to=.. .`; go build -o $target_bin -v -x .",
+				"statusBar": {
+					"alignment": "left",
+					"text": "Go: Quick Build",
+					"priority": -9998
+				}
+			},
+			"Launch": {
+				"icon": "flame",
+				"command": "commands.runInTerminal",
+				"args": "target_bin=`realpath --relative-to=.. .`; \"./$target_bin\";",
+				"statusBar": {
+					"alignment": "left",
+					"text": "Launch",
+					"priority": -9999
+				}
+			}
+		}
+	}
+}
